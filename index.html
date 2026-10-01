@@ -7,183 +7,274 @@
 <title>My App | Download</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #08080d;
-  color: #fff;
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#08080d;
+  color:#fff;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 60px 20px 45px;
+/* =========================
+   6 HOUR OFFER
+========================= */
+
+.offer{
+  width:100%;
+  background:linear-gradient(90deg,#7c1d1d,#dc2626,#7c1d1d);
+  padding:14px 15px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,.35);
 }
 
-.badge {
-  display: inline-block;
-  padding: 7px 14px;
-  border-radius: 30px;
-  background: #191928;
-  color: #a78bfa;
-  font-size: 13px;
-  margin-bottom: 20px;
+.offer-title{
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:5px;
 }
 
-h1 {
-  font-size: clamp(38px, 8vw, 64px);
-  margin-bottom: 15px;
+.countdown{
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:2px;
 }
 
-.hero p {
-  color: #a1a1aa;
-  max-width: 600px;
-  margin: 0 auto 28px;
-  line-height: 1.6;
+.countdown-label{
+  font-size:11px;
+  opacity:.85;
+  margin-top:3px;
 }
 
-.download {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  font-size: 19px;
-  font-weight: bold;
-  padding: 17px 34px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
-  box-shadow: 0 12px 35px rgba(79, 70, 229, 0.35);
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  text-align:center;
+  padding:55px 20px 45px;
 }
 
-.download:hover {
-  transform: translateY(-2px);
+.badge{
+  display:inline-block;
+  padding:7px 14px;
+  border-radius:30px;
+  background:#191928;
+  color:#a78bfa;
+  font-size:13px;
+  margin-bottom:20px;
 }
 
-.info {
-  margin-top: 13px;
-  color: #71717a;
-  font-size: 13px;
+h1{
+  font-size:clamp(38px,8vw,64px);
+  margin-bottom:15px;
 }
 
-/* RATING */
-.rating {
-  width: min(420px, 90%);
-  margin: 10px auto 55px;
-  text-align: center;
-  padding: 22px;
-  background: #111118;
-  border: 1px solid #242432;
-  border-radius: 20px;
+.hero p{
+  color:#a1a1aa;
+  max-width:600px;
+  margin:0 auto 28px;
+  line-height:1.6;
 }
 
-.stars {
-  color: #fbbf24;
-  font-size: 27px;
-  letter-spacing: 3px;
+.download{
+  display:inline-block;
+  text-decoration:none;
+  color:white;
+  font-size:19px;
+  font-weight:bold;
+  padding:17px 34px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#7c3aed,#2563eb);
+  box-shadow:0 12px 35px rgba(79,70,229,.35);
+  transition:.2s;
 }
 
-.score {
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 7px;
+.download:hover{
+  transform:translateY(-2px);
 }
 
-.rating small {
-  display: block;
-  color: #71717a;
-  margin-top: 5px;
+.info{
+  margin-top:13px;
+  color:#71717a;
+  font-size:13px;
 }
 
-/* GALLERY */
-.section {
-  width: min(1100px, 92%);
-  margin: auto;
+/* =========================
+   RATING
+========================= */
+
+.rating{
+  width:min(420px,90%);
+  margin:10px auto 55px;
+  text-align:center;
+  padding:22px;
+  background:#111118;
+  border:1px solid #242432;
+  border-radius:20px;
 }
 
-.section h2 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 25px;
+.stars{
+  color:#fbbf24;
+  font-size:27px;
+  letter-spacing:3px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  padding-bottom: 60px;
+.score{
+  font-size:28px;
+  font-weight:bold;
+  margin-top:7px;
 }
 
-/* CARD */
-.card {
-  display: block;
-  text-decoration: none;
-  color: white;
-  background: #111118;
-  border: 1px solid #242432;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: 0.25s;
+.rating small{
+  display:block;
+  color:#71717a;
+  margin-top:5px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #6366f1;
+/* =========================
+   PROFILES
+========================= */
+
+.section{
+  width:min(1100px,92%);
+  margin:auto;
 }
 
-.card img {
-  width: 100%;
-  height: 280px;
-  display: block;
-  object-fit: cover;
+.section h2{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:25px;
 }
 
-/* PROFILE INFORMATION */
-.profile-info {
-  padding: 16px;
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding-bottom:60px;
 }
 
-.profile-name {
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 9px;
+.card{
+  display:block;
+  text-decoration:none;
+  color:white;
+  background:#111118;
+  border:1px solid #242432;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.2s;
 }
 
-.profile-detail {
-  display: block;
-  color: #a1a1aa;
-  font-size: 14px;
-  margin-top: 5px;
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#5b5bea;
 }
 
-/* FOOTER */
-footer {
-  border-top: 1px solid #20202a;
-  text-align: center;
-  color: #71717a;
-  padding: 25px;
-  font-size: 13px;
+/* Image wrapper */
+
+.image-wrap{
+  position:relative;
+  width:100%;
+  height:280px;
+  overflow:hidden;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
+.card img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
 
-  .gallery {
-    grid-template-columns: 1fr;
+/* LIVE badge */
+
+.live{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#ef1d1d;
+  color:white;
+  padding:7px 11px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+.live-dot{
+  display:inline-block;
+  width:7px;
+  height:7px;
+  background:white;
+  border-radius:50%;
+  margin-right:5px;
+}
+
+/* Profile information */
+
+.profile-info{
+  padding:16px;
+  background:#111118;
+}
+
+.profile-name{
+  display:block;
+  font-size:20px;
+  font-weight:bold;
+  color:#fff;
+  margin-bottom:8px;
+}
+
+.profile-detail{
+  display:block;
+  color:#a1a1aa;
+  font-size:14px;
+  margin-top:5px;
+}
+
+.location{
+  color:#c4b5fd;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  border-top:1px solid #20202a;
+  text-align:center;
+  color:#71717a;
+  padding:25px;
+  font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .gallery{
+    grid-template-columns:1fr;
   }
 
-  .card img {
-    height: 260px;
+  .image-wrap{
+    height:280px;
   }
 
-  .download {
-    width: 100%;
-    max-width: 360px;
+  .download{
+    width:100%;
+    max-width:360px;
+  }
+
+  .countdown{
+    font-size:22px;
   }
 }
 </style>
@@ -191,19 +282,52 @@ footer {
 
 <body>
 
-<!-- HERO SECTION -->
+
+<!-- =========================
+     6 HOUR OFFER COUNTDOWN
+========================= -->
+
+<div class="offer">
+
+  <div class="offer-title">
+    🔥 OFFER ENDS IN
+  </div>
+
+  <div class="countdown" id="countdown">
+    06:00:00
+  </div>
+
+  <div class="countdown-label">
+    HOURS &nbsp; : &nbsp; MINUTES &nbsp; : &nbsp; SECONDS
+  </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-  <div class="badge">ANDROID APP</div>
+  <div class="badge">
+    ANDROID APP
+  </div>
 
-  <h1>My App</h1>
+  <h1>
+    My App
+  </h1>
 
   <p>
     Download the latest version of our Android application.
     Fast, simple and easy to install.
   </p>
 
-  <a class="download" href="app.apk" download>
+  <a
+    class="download"
+    href="app.apk"
+    download
+  >
     ⬇️ Download APK
   </a>
 
@@ -214,60 +338,373 @@ footer {
 </section>
 
 
-<!-- RATING -->
+<!-- =========================
+     RATING
+========================= -->
+
 <section class="rating">
 
-  <div class="stars">★★★★★</div>
+  <div class="stars">
+    ★★★★★
+  </div>
 
-  <div class="score">4.7 / 5</div>
+  <div class="score">
+    4.7 / 5
+  </div>
 
-  <small>User Rating</small>
+  <small>
+    User Rating
+  </small>
 
 </section>
 
 
-<!-- SIX PROFILES -->
+<!-- =========================
+     PROFILES
+========================= -->
+
 <section class="section">
 
-  <h2>Profiles</h2>
+  <h2>
+    Profiles
+  </h2>
 
   <div class="gallery">
 
 
     <!-- PROFILE 1 -->
-    <a class="card" href="images/image1.jpg" download>
 
-      <img src="images/image1.jpg" alt="Profile 1">
+    <a
+      class="card"
+      href="images/image1.jpg"
+      download
+    >
+
+      <div class="image-wrap">
+
+        <img
+          src="images/image1.jpg"
+          alt="Profile 1"
+        >
+
+        <div class="live">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+
+      </div>
 
       <div class="profile-info">
-        <strong class="profile-name">Priya</strong>
-        <span class="profile-detail">Age: 24</span>
-        <span class="profile-detail">📍 Delhi, India</span>
+
+        <strong class="profile-name">
+          Priya
+        </strong>
+
+        <span class="profile-detail">
+          Age: 24
+        </span>
+
+        <span class="profile-detail location">
+          📍 Delhi, India
+        </span>
+
       </div>
 
     </a>
 
 
     <!-- PROFILE 2 -->
-    <a class="card" href="images/image2.jpg" download>
 
-      <img src="images/image2.jpg" alt="Profile 2">
+    <a
+      class="card"
+      href="images/image2.jpg"
+      download
+    >
+
+      <div class="image-wrap">
+
+        <img
+          src="images/image2.jpg"
+          alt="Profile 2"
+        >
+
+        <div class="live">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+
+      </div>
 
       <div class="profile-info">
-        <strong class="profile-name">Neha</strong>
-        <span class="profile-detail">Age: 27</span>
-        <span class="profile-detail">📍 Mumbai, India</span>
+
+        <strong class="profile-name">
+          Neha
+        </strong>
+
+        <span class="profile-detail">
+          Age: 26
+        </span>
+
+        <span class="profile-detail location">
+          📍 Mumbai, India
+        </span>
+
       </div>
 
     </a>
 
 
     <!-- PROFILE 3 -->
-    <a class="card" href="images/image3.jpg" download>
 
-      <img src="images/image3.jpg" alt="Profile 3">
+    <a
+      class="card"
+      href="images/image3.jpg"
+      download
+    >
+
+      <div class="image-wrap">
+
+        <img
+          src="images/image3.jpg"
+          alt="Profile 3"
+        >
+
+        <div class="live">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+
+      </div>
 
       <div class="profile-info">
-        <strong class="profile-name">Riya</strong>
-        <span class="profile-detail">Age: 22</span>
-        <
+
+        <strong class="profile-name">
+          Riya
+        </strong>
+
+        <span class="profile-detail">
+          Age: 23
+        </span>
+
+        <span class="profile-detail location">
+          📍 Kolkata, India
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- PROFILE 4 -->
+
+    <a
+      class="card"
+      href="images/image4.jpg"
+      download
+    >
+
+      <div class="image-wrap">
+
+        <img
+          src="images/image4.jpg"
+          alt="Profile 4"
+        >
+
+        <div class="live">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+
+      </div>
+
+      <div class="profile-info">
+
+        <strong class="profile-name">
+          Anjali
+        </strong>
+
+        <span class="profile-detail">
+          Age: 25
+        </span>
+
+        <span class="profile-detail location">
+          📍 Bengaluru, India
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- PROFILE 5 -->
+
+    <a
+      class="card"
+      href="images/image5.jpg"
+      download
+    >
+
+      <div class="image-wrap">
+
+        <img
+          src="images/image5.jpg"
+          alt="Profile 5"
+        >
+
+        <div class="live">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+
+      </div>
+
+      <div class="profile-info">
+
+        <strong class="profile-name">
+          Simran
+        </strong>
+
+        <span class="profile-detail">
+          Age: 27
+        </span>
+
+        <span class="profile-detail location">
+          📍 Jaipur, India
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- PROFILE 6 -->
+
+    <a
+      class="card"
+      href="images/image6.jpg"
+      download
+    >
+
+      <div class="image-wrap">
+
+        <img
+          src="images/image6.jpg"
+          alt="Profile 6"
+        >
+
+        <div class="live">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+
+      </div>
+
+      <div class="profile-info">
+
+        <strong class="profile-name">
+          Pooja
+        </strong>
+
+        <span class="profile-detail">
+          Age: 22
+        </span>
+
+        <span class="profile-detail location">
+          📍 Lucknow, India
+        </span>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+  © 2026 My App
+</footer>
+
+
+<!-- =========================
+     COUNTDOWN SCRIPT
+========================= -->
+
+<script>
+
+const countdownElement = document.getElementById("countdown");
+
+const STORAGE_KEY = "my_app_offer_end";
+
+let endTime = localStorage.getItem(STORAGE_KEY);
+
+if (!endTime) {
+
+  endTime = Date.now() + (6 * 60 * 60 * 1000);
+
+  localStorage.setItem(
+    STORAGE_KEY,
+    endTime
+  );
+
+}
+
+function updateCountdown(){
+
+  const now = Date.now();
+
+  let difference =
+    Number(endTime) - now;
+
+  if (difference <= 0){
+
+    countdownElement.textContent =
+      "00:00:00";
+
+    return;
+
+  }
+
+  const hours =
+    Math.floor(
+      difference / (1000 * 60 * 60)
+    );
+
+  const minutes =
+    Math.floor(
+      (difference % (1000 * 60 * 60))
+      / (1000 * 60)
+    );
+
+  const seconds =
+    Math.floor(
+      (difference % (1000 * 60))
+      / 1000
+    );
+
+  countdownElement.textContent =
+    String(hours).padStart(2,"0")
+    + ":"
+    + String(minutes).padStart(2,"0")
+    + ":"
+    + String(seconds).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+</script>
+
+</body>
+</html>
