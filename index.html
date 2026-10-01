@@ -7,157 +7,183 @@
 <title>My App | Download</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#08080d;
-  color:#fff;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #08080d;
+  color: #fff;
 }
 
-.hero{
-  text-align:center;
-  padding:60px 20px 45px;
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 45px;
 }
 
-.badge{
-  display:inline-block;
-  padding:7px 14px;
-  border-radius:30px;
-  background:#191928;
-  color:#a78bfa;
-  font-size:13px;
-  margin-bottom:20px;
+.badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: #191928;
+  color: #a78bfa;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
-h1{
-  font-size:clamp(38px,8vw,64px);
-  margin-bottom:15px;
+h1 {
+  font-size: clamp(38px, 8vw, 64px);
+  margin-bottom: 15px;
 }
 
-.hero p{
-  color:#a1a1aa;
-  max-width:600px;
-  margin:0 auto 28px;
-  line-height:1.6;
+.hero p {
+  color: #a1a1aa;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
 }
 
-.download{
-  display:inline-block;
-  text-decoration:none;
-  color:white;
-  font-size:19px;
-  font-weight:bold;
-  padding:17px 34px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#7c3aed,#2563eb);
-  box-shadow:0 12px 35px rgba(79,70,229,.35);
+.download {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 17px 34px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  box-shadow: 0 12px 35px rgba(79, 70, 229, 0.35);
 }
 
-.download:hover{
-  transform:translateY(-2px);
+.download:hover {
+  transform: translateY(-2px);
 }
 
-.info{
-  margin-top:13px;
-  color:#71717a;
-  font-size:13px;
+.info {
+  margin-top: 13px;
+  color: #71717a;
+  font-size: 13px;
 }
 
-.rating{
-  width:min(420px,90%);
-  margin:10px auto 55px;
-  text-align:center;
-  padding:22px;
-  background:#111118;
-  border:1px solid #242432;
-  border-radius:20px;
+/* RATING */
+.rating {
+  width: min(420px, 90%);
+  margin: 10px auto 55px;
+  text-align: center;
+  padding: 22px;
+  background: #111118;
+  border: 1px solid #242432;
+  border-radius: 20px;
 }
 
-.stars{
-  color:#fbbf24;
-  font-size:27px;
-  letter-spacing:3px;
+.stars {
+  color: #fbbf24;
+  font-size: 27px;
+  letter-spacing: 3px;
 }
 
-.score{
-  font-size:28px;
-  font-weight:bold;
-  margin-top:7px;
+.score {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 7px;
 }
 
-.rating small{
-  display:block;
-  color:#71717a;
-  margin-top:5px;
+.rating small {
+  display: block;
+  color: #71717a;
+  margin-top: 5px;
 }
 
-.section{
-  width:min(1100px,92%);
-  margin:auto;
+/* GALLERY */
+.section {
+  width: min(1100px, 92%);
+  margin: auto;
 }
 
-.section h2{
-  text-align:center;
-  font-size:30px;
-  margin-bottom:25px;
+.section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
 }
 
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  padding-bottom:60px;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-bottom: 60px;
 }
 
-.card{
-  display:block;
-  text-decoration:none;
-  color:white;
-  background:#111118;
-  border:1px solid #242432;
-  border-radius:18px;
-  overflow:hidden;
+/* CARD */
+.card {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: #111118;
+  border: 1px solid #242432;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.25s;
 }
 
-.card img{
-  width:100%;
-  height:280px;
-  display:block;
-  object-fit:cover;
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #6366f1;
 }
 
-.card span{
-  display:block;
-  text-align:center;
-  padding:14px;
-  color:#a1a1aa;
+.card img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  object-fit: cover;
 }
 
-footer{
-  border-top:1px solid #20202a;
-  text-align:center;
-  color:#71717a;
-  padding:25px;
-  font-size:13px;
+/* PROFILE INFORMATION */
+.profile-info {
+  padding: 16px;
 }
 
-@media(max-width:700px){
-  .gallery{
-    grid-template-columns:1fr;
+.profile-name {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 9px;
+}
+
+.profile-detail {
+  display: block;
+  color: #a1a1aa;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #20202a;
+  text-align: center;
+  color: #71717a;
+  padding: 25px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
   }
 
-  .card img{
-    height:240px;
+  .card img {
+    height: 260px;
   }
 
-  .download{
-    width:100%;
-    max-width:360px;
+  .download {
+    width: 100%;
+    max-width: 360px;
   }
 }
 </style>
@@ -165,6 +191,7 @@ footer{
 
 <body>
 
+<!-- HERO SECTION -->
 <section class="hero">
 
   <div class="badge">ANDROID APP</div>
@@ -186,59 +213,61 @@ footer{
 
 </section>
 
+
+<!-- RATING -->
 <section class="rating">
 
   <div class="stars">★★★★★</div>
 
-  <div class="score">4.7</div>
+  <div class="score">4.7 / 5</div>
 
   <small>User Rating</small>
 
 </section>
 
+
+<!-- SIX PROFILES -->
 <section class="section">
 
-  <h2>App Screenshots</h2>
+  <h2>Profiles</h2>
 
   <div class="gallery">
 
+
+    <!-- PROFILE 1 -->
     <a class="card" href="images/image1.jpg" download>
-      <img src="images/image1.jpg" alt="Screenshot 1">
-      <span>Download Image 1</span>
+
+      <img src="images/image1.jpg" alt="Profile 1">
+
+      <div class="profile-info">
+        <strong class="profile-name">Priya</strong>
+        <span class="profile-detail">Age: 24</span>
+        <span class="profile-detail">📍 Delhi, India</span>
+      </div>
+
     </a>
 
+
+    <!-- PROFILE 2 -->
     <a class="card" href="images/image2.jpg" download>
-      <img src="images/image2.jpg" alt="Screenshot 2">
-      <span>Download Image 2</span>
+
+      <img src="images/image2.jpg" alt="Profile 2">
+
+      <div class="profile-info">
+        <strong class="profile-name">Neha</strong>
+        <span class="profile-detail">Age: 27</span>
+        <span class="profile-detail">📍 Mumbai, India</span>
+      </div>
+
     </a>
 
+
+    <!-- PROFILE 3 -->
     <a class="card" href="images/image3.jpg" download>
-      <img src="images/image3.jpg" alt="Screenshot 3">
-      <span>Download Image 3</span>
-    </a>
 
-    <a class="card" href="images/image4.jpg" download>
-      <img src="images/image4.jpg" alt="Screenshot 4">
-      <span>Download Image 4</span>
-    </a>
+      <img src="images/image3.jpg" alt="Profile 3">
 
-    <a class="card" href="images/image5.jpg" download>
-      <img src="images/image5.jpg" alt="Screenshot 5">
-      <span>Download Image 5</span>
-    </a>
-
-    <a class="card" href="images/image6.jpg" download>
-      <img src="images/image6.jpg" alt="Screenshot 6">
-      <span>Download Image 6</span>
-    </a>
-
-  </div>
-
-</section>
-
-<footer>
-  © 2026 
-</footer>
-
-</body>
-</html>
+      <div class="profile-info">
+        <strong class="profile-name">Riya</strong>
+        <span class="profile-detail">Age: 22</span>
+        <
